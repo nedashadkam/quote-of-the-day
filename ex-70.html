@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        div {
+            width: 40%;
+            padding: 2%;
+            background-color: aliceblue;
+            border: 1px solid blanchedalmond;
+            border-radius: 5px;
+            text-align: center;
+            margin-left: 28%;
+            margin-top: 30vh;
+        }
+
+        input {
+            background-color: moccasin;
+            border: 1px solid chocolate;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+
+        <h2>quote of the day</h2>
+
+        <p>Click the button to get a rabdom quote</p>
+
+        <input onclick="show()" type="button" value="New quote">
+
+        <p id="demo"></p>
+
+    </div>
+
+    <script>
+
+        const quotation = [
+            {
+                'author': 'کورش کبیر',
+                'quote': 'فرمانروایی بر مردمان به شیوه ای نیک و والا بزرگ تر از هر کار دیگر است '
+            },
+            {
+                'author': 'آلبرت انیشتین',
+                'quote': 'از دیروز بیاموز. برای امروز زندگی کن و امید به فردا داشته باش '
+            },
+            {
+                'author': 'گاندی',
+                'quote': 'پیروزی آن نیست که هرگز زمین نخوری، آنست که بعد از هر زمین خوردنی برخیزی'
+            },
+            {
+                'author': 'والترنیس',
+                'quote': 'تغییر دهندگان اثر گذار در جهان کسانی هستند کـه بر خلاف جریان شنا میکنند'
+            },
+            {
+                'author': 'داستا یوفسکی',
+                'quote': 'تنها آرامش و سکوت سرچشمه‌ي نیروی لایزال اسـت'
+            },
+            {
+                'author': 'ناپلئون هیل',
+                'quote': 'دانستن کافی نیست، باید بـه دانسته ي خود عمل کنید'
+            },
+        ];
+
+        function show() {
+
+            let number = Math.floor(Math.random() * 6);
+
+            document.getElementById("demo").innerHTML =
+              ' " ' + quotation[number].quote + ' " ' + '<br>' + '<br>' +  quotation[number].author;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
